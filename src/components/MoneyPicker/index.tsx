@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Money } from "./styles";
+import { Container, FiveReais, OneReal, TwoReais } from "./styles";
 
 interface MoneyPickerProps {
   received: number;
@@ -15,27 +15,21 @@ const MoneyPicker: React.FC<MoneyPickerProps> = (props) => {
 
   return (
     <Container>
-      <Money
+      <OneReal
         active={selectedMoney === '1'}
         disabled={isMaxMoneyReceived}
         onClick={() => onMoneySelected('1')}
-      >
-        R$ 1,00
-      </Money>
-      <Money
+      />
+      <TwoReais
         active={selectedMoney === '2'}
         disabled={isMaxMoneyReceived}
         onClick={() => onMoneySelected('2')}
-      >
-        R$ 2,00
-      </Money>
-      <Money
+      />
+      <FiveReais
         active={selectedMoney === '5'}
         disabled={isMaxMoneyReceived}
         onClick={() => onMoneySelected('5')}
-      >
-        R$ 5,00
-      </Money>
+      />
     </Container>
   );
 }

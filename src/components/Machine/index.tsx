@@ -25,18 +25,10 @@ const Machine: React.FC<MachineProps> = (props) => {
     <Container>
       <Panel>
         <Visor>{`R$ ${received}`}</Visor>
-        <AddMoneyButton onClick={handleMoneyAdded}>
-          Adicionar dinheiro
-        </AddMoneyButton>
-        <AButton onClick={() => onCandyClicked('a')}>
-          A
-        </AButton>
-        <BButton onClick={() => onCandyClicked('b')}>
-          B
-        </BButton>
-        <CButton onClick={() => onCandyClicked('c')}>
-          C
-        </CButton>
+        <AddMoneyButton onClick={handleMoneyAdded} />
+        <AButton onClick={() => onCandyClicked('a')} />
+        <BButton onClick={() => onCandyClicked('b')} />
+        <CButton onClick={() => onCandyClicked('c')} />
       </Panel>
     </Container>
   );

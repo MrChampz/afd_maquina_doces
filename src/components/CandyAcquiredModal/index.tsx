@@ -17,7 +17,11 @@ const CandyAcquiredModal: React.FC<CandyAcquiredModalProps> = (props) => {
       onBackgroundClick={() => onClosed()}
       onEscapeKeydown={() => onClosed()}
     >
-      <h2>{`Parabéns, retire seu doce e seu troco de R$ ${change}`}</h2>
+      {change > 0 ? (
+        <h2>{`Parabéns, retire seu doce e seu troco de R$ ${change}!!!`}</h2>
+      ) : (    
+        <h2>Parabéns, retire seu doce!!!</h2>
+      )}
     </Modal>
   );
 }

@@ -1,10 +1,17 @@
 import styled from "styled-components";
 
+import machineBackground from "../../assets/machine.svg";
+import addMoneyButton from "../../assets/add_money_button.svg";
+import aButton from "../../assets/a_button.svg";
+import bButton from "../../assets/b_button.svg";
+import cButton from "../../assets/c_button.svg";
+
 export const Container = styled.div`
   width: 450px;
-  height: 300px;
+  height: 480px;
 
-  background: blue;
+  background-image: url(${machineBackground});
+  background-size: cover;
 
   display: flex;
   flex-direction: row;
@@ -13,10 +20,9 @@ export const Container = styled.div`
 `;
 
 export const Panel = styled.div`
-  width: 90px;
-  padding: 10px;
-
-  background: yellow;
+  width: 111px;
+  margin: 37px 21px 0 0;
+  padding: 9px 12px;
 
   display: flex;
   flex-direction: column;
@@ -25,26 +31,44 @@ export const Panel = styled.div`
 
 export const Visor = styled.div`
   width: 100%;
-  height: 30px;
-  margin-bottom: 15px;
-  
-  background: red;
+  height: 85px;
+  margin-bottom: 12px;
+
+  font-size: 2em;
+  font-family: Arial;
+  line-height: 85px;
+  text-align: center;
 `;
 
 export const Button = styled.button`
   width: 100%;
-  height: 30px;
-  margin-bottom: 10px;
-
-  background: red;
+  height: 45px;
+  margin-bottom: 23px;
+  padding: 0;
+  
+  cursor: pointer;
+  
+  background-size: cover;
+  background-position: 50% 50%;
+	background-color: transparent;
+  box-shadow: none;
+	border: none;
 `;
 
 export const AddMoneyButton = styled(Button)`
-  margin-bottom: 40px;
+  margin-bottom: 51px;
+  background-image: url(${addMoneyButton});
+  background-position: 68% 90%;
 `;
 
-export const AButton = styled(Button)``;
+export const AButton = styled(Button)`
+  background-image: url(${aButton});
+`;
 
-export const BButton = styled(Button)``;
+export const BButton = styled(Button)`
+  background-image: url(${bButton});
+`;
 
-export const CButton = styled(Button)``;
+export const CButton = styled(Button)`
+  background-image: url(${cButton});
+`;
